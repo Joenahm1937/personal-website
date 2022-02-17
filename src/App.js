@@ -1,6 +1,6 @@
 import "./App.css";
 import Snowfall from "react-snowfall";
-import AnimatedTyping from './components/AnimatedTyping'
+import Header from './components/Header'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         style={{}}
         snowflakeCount={50}
       />
-      <AnimatedTyping/>
+      <Header/>
     </div>
   );
 }
