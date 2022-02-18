@@ -36,7 +36,10 @@ const LinkedInIcon = () => {
 
 const SpotifyIcon = () => {
   return (
-    <a className="SocialLink" href="https://open.spotify.com/artist/27OHvnFu5J3WoQYVE4oJXU">
+    <a
+      className="SocialLink"
+      href="https://open.spotify.com/artist/27OHvnFu5J3WoQYVE4oJXU"
+    >
       <svg
         fill="#FFFFFF"
         width="64"
