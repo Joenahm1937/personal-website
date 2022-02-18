@@ -9,6 +9,10 @@ div {
   display: block;
 }
 
+.Header {
+  width: 100vw;
+}
+
 .App {
   text-align: center;
   background: linear-gradient(
@@ -26,20 +30,6 @@ div {
   padding: 50px;
 }
 
-.Column {
-  display: flex;
-  flex-direction: column;
-}
-
-.Left {
-  width: 55%;
-}
-
-.Right {
-  width: 45%;
-  justify-content: center;
-}
-
 .Title {
   font-weight: bold;
   color: #ffe5d9;
@@ -47,6 +37,10 @@ div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.AnimatedTitle {
+  font-size: 3vw;
 }
 
 .SocialList {
@@ -63,6 +57,11 @@ div {
   margin-right: 2%;
 }
 
+.SocialLink {
+  display:block;
+  cursor: pointer;
+}
+
 .ResumeButton {
   font-family: "Quicksand", sans-serif;
   color: #ffe5d9;
@@ -75,15 +74,36 @@ div {
   align-items: center;
 }
 
+.carousel {
+  width: 100vw;
+  cursor: grab;
+  overflow: hidden;
+}
+
+.inner-carousel {
+  display: flex;
+}
+
+.item {
+  min-height: 40rem;
+  min-width: 30rem;
+  background-color: white;
+  padding: 40px;
+  margin: 10px;
+  border-radius: 2rem;
+}
+
+
 @media screen and (max-width: 900px) {
-  .Left,
-  .Right {
-    width: 100%;
-  }
   .Body {
     padding: 25px;
   }
+
   .Title {
     font-size: 10vw;
+  }
+
+  .AnimatedTitle {
+    font-size: 8vw;
   }
 }
