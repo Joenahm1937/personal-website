@@ -5,6 +5,10 @@
   outline: 0;
 }
 
+body {
+  overflow: hidden;
+}
+
 div {
   display: block;
 }
@@ -58,7 +62,7 @@ div {
 }
 
 .SocialLink {
-  display:block;
+  display: block;
   cursor: pointer;
 }
 
@@ -69,7 +73,7 @@ div {
   border: 1px solid;
   padding: 10px 20px;
   border-radius: 60px;
-  transition: .15s ease-out;
+  transition: 0.15s ease-out;
   display: flex;
   align-items: center;
 }
@@ -78,21 +82,22 @@ div {
   width: 100vw;
   cursor: grab;
   overflow: hidden;
+  border-radius: 2rem;
 }
 
 .inner-carousel {
   display: flex;
+  position: relative;
 }
 
 .item {
-  min-height: 40rem;
-  min-width: 30rem;
-  background-color: white;
+  min-height: 25rem;
+  min-width: 50rem;
   padding: 40px;
   margin: 10px;
   border-radius: 2rem;
+  box-shadow: 0 5px 14px rgb(0 0 0 / 0.4);
 }
-
 
 @media screen and (max-width: 900px) {
   .Body {
