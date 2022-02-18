@@ -1,26 +1,39 @@
-import Typing from "react-typing-animation";
+import Typewriter from "typewriter-effect";
+import { GithubIcon, LinkedInIcon, DownloadIcon } from "./Icons";
+
+const entry1 = "Joseph Nahm";
+const entry2 = "a Developer";
+const entry3 = "Looking For Work";
 
 const Header = () => {
-  const entry1 = "Joseph Nahm";
-  const entry2 = "a Developer";
-  const entry3 = "Looking For Work";
   return (
-    <div className="header">
-      <h1>
+    <div className="Header">
+      <h1 className="Title">
         Hi, I am
-        <Typing loop={true}>
-          <Typing.Speed ms={60} />
-          {entry1}
-          <Typing.Delay ms={2000} />
-          <Typing.Backspace count={entry1.length + 1} />
-          {entry2}
-          <Typing.Delay ms={2000} />
-          <Typing.Backspace count={entry2.length + 1} />
-          {entry3}
-          <Typing.Delay ms={2000} />
-          <Typing.Backspace count={entry3.length + 1} />
-        </Typing>
+        <Typewriter
+          options={{
+            strings: [entry1, entry2, entry3],
+            autoStart: true,
+            loop: true,
+          }}
+        />
       </h1>
+      <div className="Social">
+        <ul className="SocialList">
+          <li className="SocialItem">
+            <GithubIcon />
+          </li>
+          <li className="SocialItem">
+            <LinkedInIcon />
+          </li>
+          <li className="SocialItem">
+            <button className="ResumeButton">
+              <p style={{marginRight: "6px", fontSize: "30px"}}>Resume</p>
+              <DownloadIcon/>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
