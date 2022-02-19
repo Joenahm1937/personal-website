@@ -1,5 +1,6 @@
 import Typewriter from "typewriter-effect";
 import { GithubIcon, LinkedInIcon, DownloadIcon, SpotifyIcon } from "./Icons";
+import { motion } from "framer-motion";
 import Resume from "../assets/resume.pdf";
 import Card from "./Card";
 import { useEffect } from "react";
@@ -18,9 +19,18 @@ const Header = () => {
     card = document.querySelector(".card");
     contact = document.querySelector("#contact");
     sneaker = document.querySelector(".sneaker");
-  }, [])
+  }, []);
   return (
-    <div className="Header">
+    <motion.div
+      className="Header"
+      initial={{ opacity: 0 }}
+      transition={{
+        delay: 0.1,
+        x: { type: "spring", stiffness: 100 },
+        default: { duration: 1 },
+      }}
+      animate={{ opacity: 1 }}
+    >
       <div className="ColumnLeft">
         <div className="Title AnimatedTitle">
           <h1 className="Title">Hi, I am</h1>
@@ -54,26 +64,26 @@ const Header = () => {
       </div>
       <div
         className="ColumnRight"
-        onMouseMove={e => {
+        onMouseMove={(e) => {
           let xAxis = (window.innerWidth / 2 - e.pageX) / 20;
-          let yAxis = (window.innerHeight / 2 - e.pageY)/ 20;
-          card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
+          let yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+          card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
         }}
-        onMouseLeave={e => {
-          card.style.transition = 'all 0.5s ease';
-          card.style.transform = 'rotateY(0deg) rotateX(0deg)'
+        onMouseLeave={(e) => {
+          card.style.transition = "all 0.5s ease";
+          card.style.transform = "rotateY(-20deg) rotateX(10deg)";
           contact.style.transform = "translateZ(0px)";
           sneaker.style.transform = "translateZ(0px)";
         }}
-        onMouseEnter={e => {
-          card.style.transition = 'none';
+        onMouseEnter={(e) => {
+          card.style.transition = "none";
           contact.style.transform = "translateZ(30px)";
           sneaker.style.transform = "translateZ(30px)";
         }}
       >
         <Card />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

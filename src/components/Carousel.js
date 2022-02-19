@@ -13,16 +13,27 @@ const Carousel = () => {
   }, []);
 
   return (
-    <motion.div ref={carousel} className="carousel" whileTap={{cursor: "grabbing"}}>
+    <motion.div
+      ref={carousel}
+      className="carousel"
+      whileTap={{ cursor: "grabbing" }}
+      initial={{ opacity: 0 }}
+      transition={{
+        delay: 0.4,
+        x: { type: "spring", stiffness: 100 },
+        default: { duration: 1 },
+      }}
+      animate={{ opacity: 1 }}
+    >
       <motion.div
         drag="x"
         dragConstraints={{ right: 0, left: -width - 10 }}
         className="inner-carousel"
       >
-        <Sudorkle/>
-        <ColorSorter/>
-        <Gradynt/>
-        <SDC/>
+        <Sudorkle />
+        <ColorSorter />
+        <Gradynt />
+        <SDC />
       </motion.div>
     </motion.div>
   );

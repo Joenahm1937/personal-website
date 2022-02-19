@@ -33,7 +33,8 @@ div {
 .Body {
   display: flex;
   flex-flow: wrap;
-  padding: 50px;
+  /* padding: 50px; */
+  padding: 3vh 3vh 1vh 3vh;
 }
 
 .ColumnLeft {
@@ -55,12 +56,14 @@ div {
 }
 
 .card {
+  padding-top: 15px;
   transform-style: preserve-3d;
-  height: 85%;
+  height: 30vh;
   width: 55%;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
   border-radius: 2rem;
   background-color: white;
+  transform: rotateY(-20deg) rotateX(10deg);
 }
 
 .sneaker {
@@ -94,12 +97,20 @@ h3 {
   margin: 10px;
   font-family: "Quicksand", sans-serif;
   background: none;
-  padding: 5px 20px;
+  padding: 5% 1vw;
   border-radius: 60px;
   transition: 0.15s ease-out;
   cursor: pointer;
   text-decoration: none;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.info button:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 .Title {
@@ -209,6 +220,5 @@ h3 {
 
   .card {
     min-width: 35%;
-    width: 35%;
   }
 }
