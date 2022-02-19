@@ -45,13 +45,28 @@ const Header = () => {
         <div className="Social">
           <ul className="SocialList">
             <li className="SocialItem">
-              <GithubIcon />
+              <motion.div
+                animate={{ y: 6 }}
+                transition={{ ease: "easeOut", duration: 2 }}
+              >
+                <GithubIcon />
+              </motion.div>
             </li>
             <li className="SocialItem">
-              <LinkedInIcon />
+              <motion.div
+                animate={{ y: 6 }}
+                transition={{ ease: "easeOut", duration: 2 }}
+              >
+                <LinkedInIcon />
+              </motion.div>
             </li>
             <li className="SocialItem">
-              <SpotifyIcon />
+              <motion.div
+                animate={{ y: 6 }}
+                transition={{ ease: "easeOut", duration: 2 }}
+              >
+                <SpotifyIcon />
+              </motion.div>
             </li>
             <li className="SocialItem">
               <a className="ResumeButton" href={Resume} download="resume.pdf">
