@@ -184,21 +184,22 @@ h3 {
 
 /* Projects */
 
-.projectHeader {
+.Sudorkle .projectHeader {
   color: #ffe5d9;
 }
 
-.projectContent {
+.Sudorkle .projectContent {
   display: flex;
   height: 90%;
 }
 
-.projectContent .columnLeft {
+.Sudorkle .projectContent .columnLeft {
+  margin: 1vh;
   width: 20%;
   height: 100%;
 }
 
-.projectContent .columnRight {
+.Sudorkle .projectContent .columnRight {
   width: 80%;
 }
 
@@ -206,6 +207,33 @@ h3 {
   width: 100%;
   border-radius: 2.5vh;
   height: 100%;
+}
+
+.gif {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.ColorSorter .projectHeader {
+  color: #ffe5d9;
+}
+
+.ColorSorter .gif {
+  width: 60%;
+  border-radius: 1vh;
+  height: 100%;
+}
+
+.ColorSorter .topRow {
+  margin: 2vh 0 3vh 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 900px) {

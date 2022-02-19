@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 const ColorSorter = () => {
   return (
     <motion.div
-      className="item"
+      className="item ColorSorter"
       initial={{ opacity: 0 }}
       transition={{
         delay: 0.6,
@@ -11,7 +11,13 @@ const ColorSorter = () => {
       }}
       animate={{ opacity: 1 }}
     >
-      Color Sorter
+      <h1 className="projectHeader">Color Sorter</h1>
+      <div className="projectContent">
+        <div className="topRow">
+          <img src="gifs/colorSorter.gif" alt="colorSortergif" className="gif"></img>
+        </div>
+        <div className="bottomRow">Sorting Visualizer with multipe parameters blah blah blah</div>
+      </div>
     </motion.div>
   );
 };
