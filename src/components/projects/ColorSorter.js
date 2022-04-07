@@ -14,7 +14,7 @@ const ColorSorter = () => {
       <h1 className="projectHeader">Color Sorter</h1>
       <div className="projectContent">
         <div className="topRow">
-          <img src="gifs/colorSorter.gif" alt="colorSortergif" className="gif"></img>
+          <img src="gifs/colorSort.gif" alt="colorSortergif" className="gif"></img>
         </div>
         <div className="bottomRow">Sorting Visualizer with multipe parameters blah blah blah</div>
       </div>

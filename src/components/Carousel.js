@@ -4,6 +4,7 @@ import Sudorkle from "./projects/Sudokrle";
 import ColorSorter from "./projects/ColorSorter";
 import Gradynt from "./projects/Gradynt";
 import SDC from "./projects/SDC";
+import FEC from "./projects/FEC";
 const Carousel = () => {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
@@ -30,10 +31,11 @@ const Carousel = () => {
         dragConstraints={{ right: 0, left: -width - 10 }}
         className="inner-carousel"
       >
+        <FEC />
+        <SDC />
         <Sudorkle />
         <ColorSorter />
         <Gradynt />
-        <SDC />
       </motion.div>
     </motion.div>
   );
